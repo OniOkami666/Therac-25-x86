@@ -1,3 +1,11 @@
+/* 
+ * Copyright (c) 2022 Michael John
+ * Copyright (c) 2026 OniOkami666 (Modifications for Assembly implementation)
+ *
+ * This software is licensed under the MIT License. 
+ * See the LICENSE file in the project root for full license information.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <curses.h>
