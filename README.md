@@ -1,6 +1,6 @@
 # Therac-25-x86 (A combination of the C port & x86-64 Assembly)
 
-A recreation of the Therac-25 radiation therapy machine's software in x86-64 assembly with aid from the C port.  Essentially, the 8 second race condition and safety logic is rewritten in assembly while still using a C terminal.
+A slight implementation of the Therac-25 radiation therapy machine's software in x86-64 assembly with aid from the C port.  Essentially, the 8 second race condition and safety logic is rewritten in assembly while still using a C terminal.
 
 ## Screenshot 
 <img src="images/Example.png">
