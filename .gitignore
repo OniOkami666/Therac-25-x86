@@ -1,0 +1,4 @@
+*.o
+therac.o
+therac25_sim
+out/
