@@ -2,6 +2,9 @@
 
 A recreation of the Therac-25 radiation therapy machine's software in x86-64 assembly with aid from the C port.  Essentially, the 8 second race condition and safety logic is rewritten in assembly while still using a C terminal.
 
+## Screenshot 
+<img src="images/Example.png">
+
 ## The learning process
 
 To make this possible, I had to learn computer architectural concepts along the way as I did it (since I am usually a higher level dev).  So that meant I had to learn about CPU registers, how the equations flow (instruction Destination, Source), memory stacking, prologing, calling convention rules for AMD64, and CPU flag registers.
