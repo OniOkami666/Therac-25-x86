@@ -31,10 +31,8 @@ extern int mode;
 extern time_t lastcheck;
 extern double prescribed[];
 
-int curline[] = {1,2,2,5,6,7,10,11,12,13,14,15,22};
-int curcol[] = {16,CENTER_LEFT+11,RIGHT,CENTER_RIGHT,CENTER_RIGHT,CENTER_RIGHT,
-		CENTER_RIGHT,CENTER_RIGHT,CENTER_RIGHT,CENTER_RIGHT,CENTER_RIGHT,
-		CENTER_RIGHT,CENTER_RIGHT+9};
+extern int curline[];
+extern int curcol[];
 
 void display(WINDOW *w);
 void getinput(WINDOW *w);

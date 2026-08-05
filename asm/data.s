@@ -1,7 +1,14 @@
 global fmt_mal_13, fmt_mal_54, fmt_mal_26, fmt_success 
 global BEAM_TYPES, MODE_TYPES
+global curline, curcol
 global actualbeam, beam, energy, cloc, mode, done, lastcheck
 global name, actual, prescribed
+
+LEFT            equ 10
+CENTER_LEFT     equ 33
+CENTER_RIGHT    equ 50
+RIGHT           equ 70
+CURMAX          equ 13
 
 section .data 
 
@@ -12,12 +19,12 @@ section .data
     fmt_mal_26      db "MALFUNCTION 26 (%d rads delivered)", 0
     fmt_success     db "TREATED %s SUCCESSFULLY!", 0
 
-    str_empty           db 0
-    str_mode_x          db "X", 0
-    str_mode_e          db "E", 0
+    str_empty       db 0
+    str_mode_x      db "X", 0
+    str_mode_e      db "E", 0
 
-    str_case_entry      db "DATA ENTRY", 0
-    str_case_ready      db "BEAM READY", 0
+    str_case_entry  db "DATA ENTRY", 0
+    str_case_ready  db "BEAM READY", 0
 
     align 8
     BEAM_TYPES:
@@ -29,7 +36,29 @@ section .data
         dq str_case_entry
         dq str_case_ready
 
-    section .bss
+    align 4
+
+    curline:
+        dd 1, 2, 2, 5, 6, 7, 10, 11, 12, 13, 14, 15, 22
+    
+    curcol:
+        dd 16
+        dd CENTER_LEFT + 11
+        dd RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT
+        dd CENTER_RIGHT + 9
+
+    
+
+section .bss
 
     actualbeam      resd 1
     beam            resd 1
