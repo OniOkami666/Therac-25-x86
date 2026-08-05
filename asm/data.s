@@ -1,4 +1,5 @@
-global fmt_mal_13, fmt_mal_54, fmt_mal_26, fmt_success
+global fmt_mal_13, fmt_mal_54, fmt_mal_26, fmt_success 
+global BEAM_TYPES, MODE_TYPES
 global actualbeam, beam, energy, cloc, mode, done, lastcheck
 global name, actual, prescribed
 
@@ -10,6 +11,23 @@ section .data
     fmt_mal_54      db "MALFUNCTION 54 (%d rads delivered)", 0
     fmt_mal_26      db "MALFUNCTION 26 (%d rads delivered)", 0
     fmt_success     db "TREATED %s SUCCESSFULLY!", 0
+
+    str_empty           db 0
+    str_mode_x          db "X", 0
+    str_mode_e          db "E", 0
+
+    str_case_entry      db "DATA ENTRY", 0
+    str_case_ready      db "BEAM READY", 0
+
+    align 8
+    BEAM_TYPES:
+        dq str_empty
+        dq str_mode_x
+        dq str_mode_e
+
+    MODE_TYPES:
+        dq str_case_entry
+        dq str_case_ready
 
     section .bss
 

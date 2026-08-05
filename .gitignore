@@ -1,4 +1,4 @@
 *.o
 therac.o
-therac25_sim
+therac25
 out/

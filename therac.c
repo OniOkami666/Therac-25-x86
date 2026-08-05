@@ -18,8 +18,8 @@
 #define RIGHT        70
 #define CURMAX 13
 
-char *BEAM_TYPES[] = {"", "X", "E"};
-char *MODE_TYPES[] = {"DATA ENTRY", "BEAM READY"};
+extern char *BEAM_TYPES[];
+extern char *MODE_TYPES[];
 extern int actualbeam;
 extern int beam;
 extern int energy;
